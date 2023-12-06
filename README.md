@@ -1,37 +1,40 @@
-# Active Membership Inference Attack under Local Differential Privacy in Federated Learning
+# 在联邦学习中基于本地差分隐私（LDP）的主动成员推断攻击（AMI）
 
-## Dependencies
-This codebase has been developed and tested only with python 3.8.10 and pytorch 1.7.0, on a linux 64-bit operation system.
+原仓库：
+https://github.com/trucndt/ami
+
+论文：
+https://arxiv.org/abs/2302.12685
+
+## 依赖项
+此代码库仅在python 3.8.10和pytorch 1.7.0上进行开发和测试，使用的操作系统为Linux 64位。
 
 ### conda
-We have prepared a file containing the same environment specifications that we use for this project. To reproduce this environment (only on a linux 64-bit OS), execute the following command:
+作者准备了一个包含与此项目使用的相同环境规范的文件。要复现此环境（仅适用于Linux 64位操作系统），执行以下命令：
 
 ```bash
 $ conda create --name <name_env> --file spec-list.txt
 ```
 
-- `name_env` is the name you want for your environment
+- `name_env` 是环境的名称
 
-Activate the created environment with the following command:
+使用以下命令激活创建的环境：
 
 ```bash
 $ conda activate <name_env>
 ```
 
+## 预处理
 
-## Preprocessing
+1. 遵循这些目录中的`README.md`文件`data_celebA/celeba`, `data_imgnet/`来下载数据集
+2. 运行 `$ python preprocessing.py`
 
-1. Follow the `README.md` files in these directories `data_celebA/celeba`, `data_imgnet/` to download the datasets
-2. Run `$ python preprocessing.py`
+## 使用方法
 
-## Usage
+- `noldp`：没有差分隐私的AMI攻击
+- `ldp`：在差分隐私下的AMI攻击（包括BitRand和OME）
 
-We include two directories:
-
-- `noldp`: AMI attack without LDP
-- `ldp`: AMI attack under LDP (including BitRand and OME)
-
-Follow the `README.md` files in those directories
+按照这些目录中的`README.md`文件的说明进行操作。
 
 ## Disclaimer
 
