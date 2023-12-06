@@ -20,6 +20,12 @@ $ conda create --name <name_env> --file spec-list.txt
 
 - `name_env` 是环境的名称
 
+查看所有环境：
+
+```bash
+$ conda info --envs
+```
+
 使用以下命令激活创建的环境：
 
 ```bash
