@@ -1,6 +1,8 @@
 # 在联邦学习中基于本地差分隐私（LDP）的主动成员推断攻击（AMI）
 
-原仓库：
+个人学习用
+
+forked from：
 https://github.com/trucndt/ami
 
 论文：
@@ -26,7 +28,7 @@ $ conda activate <name_env>
 
 ## 预处理
 
-1. 遵循这些目录中的`README.md`文件`data_celebA/celeba`, `data_imgnet/`来下载数据集
+1. 遵循 [data_celebA/celeba](data_celebA/celeba), [data_imgnet/](data_imgnet/)中的`README.md`文件来下载数据集
 2. 运行 `$ python preprocessing.py`
 
 ## 使用方法
