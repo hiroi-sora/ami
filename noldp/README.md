@@ -1,35 +1,34 @@
-We include three sets of python files for the three datasets:
+我们为三个数据集提供了三套Python文件：
 
-- `celeba-eval-noldp.py` and `celeba-exp-noldp.py`: CelebA
-- `cifar-eval-noldp.py` and `cifar-exp-noldp.py`: CIFAR-10
-- `imgnet-eval-noldp.py` and `img-exp-noldp.py`: ImageNet
+- `celeba-eval-noldp.py`和`celeba-exp-noldp.py`：CelebA数据集
+- `cifar-eval-noldp.py`和`cifar-exp-noldp.py`：CIFAR-10数据集
+- `imgnet-eval-noldp.py`和`img-exp-noldp.py`：ImageNet数据集
 
-The `*-exp*.py` is used to train the malicious parameters, while `*-eval*.py` is used to evaluate the parameters and calculate the attack success rate. Below we show an example on how to run the attack on CIFAR-10, other datasets follow the same syntax.
+`*-exp*.py`文件用于训练恶意参数，而`*-eval*.py`文件用于评估参数并计算攻击成功率。下面我们以在CIFAR-10数据集上运行攻击为例，其他数据集遵循相同的语法。
 
-To run the attack, execute the following command:
+要运行攻击，请执行以下命令：
 
 ```bash
 $ python cifar-exp-noldp.py -r NUMNEURONS -o OUTPUT_PATH
 ```
-- `NUMNEURONS` is the number of neurons in the first layer (parameter $r$)
-- `OUTPUT_PATH` is the path to the output directory
+- `NUMNEURONS`是第一层中的神经元数量（参数$r$）
+- `OUTPUT_PATH`是输出目录的路径
 
-Example:
+示例：
 ```bash
 $ python cifar-exp-noldp.py -r 2000 -o res/
 ```
 
-To get the attack success rate, execute the following command:
+要获取攻击成功率，请执行以下命令：
 ```bash
 $ python cifar-eval-noldp.py -r NUMNEURONS -o OUTPUT_PATH
 ```
-- `OUTPUT_PATH` is the path to the output files of the attack
+- `OUTPUT_PATH`是攻击输出文件的路径
 
-Example:
+示例：
 ```bash
 $ python cifar-eval-noldp.py -r 2000 -o res/
 ```
-This will output TPR, TNR, and Adv
+这将输出TPR、TNR和Adv。
 
-
-For full usage, run `python cifar-exp-noldp.py -h` and `python cifar-eval-noldp.py -h`
+要获取完整的用法信息，请运行`python cifar-exp-noldp.py -h`和`python cifar-eval-noldp.py -h`。
