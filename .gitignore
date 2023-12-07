@@ -3,3 +3,4 @@ data_celebA
 cifar10_vec
 data_cifar10
 **/__pycache__
+noldp/res_cifar

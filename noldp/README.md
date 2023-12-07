@@ -1,8 +1,8 @@
 我们为三个数据集提供了三套Python文件：
 
-- `celeba-eval-noldp.py`和`celeba-exp-noldp.py`：CelebA数据集
-- `cifar-eval-noldp.py`和`cifar-exp-noldp.py`：CIFAR-10数据集
-- `imgnet-eval-noldp.py`和`img-exp-noldp.py`：ImageNet数据集
+- `celeba-eval-noldp.py`和`celeba-exp-noldp.py`： CelebA 数据集（面部图像）
+- `cifar-eval-noldp.py`和`cifar-exp-noldp.py`： CIFAR-10 数据集（10类别）
+- `imgnet-eval-noldp.py`和`img-exp-noldp.py`： ImageNet 数据集（多类别）
 
 `*-exp*.py`文件用于训练恶意参数，而`*-eval*.py`文件用于评估参数并计算攻击成功率。下面我们以在CIFAR-10数据集上运行攻击为例，其他数据集遵循相同的语法。
 
