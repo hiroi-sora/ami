@@ -36,7 +36,7 @@ $ conda activate <name_env>
 
 1. 遵循 [data_celebA/celeba](data_celebA/celeba), [data_imgnet/](data_imgnet/)中的`README.md`文件来下载数据集
 2. 运行 `$ python preprocessing.py`
-
+nohup python preprocessing.py > preprocessing.log 2>&1 &
 ## 使用方法
 
 - `noldp`：没有差分隐私的AMI攻击

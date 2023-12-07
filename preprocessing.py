@@ -36,12 +36,13 @@ print("CelebA数据集 处理完毕")
 train_data = datasets.CIFAR10("data_cifar10", train=True, download=True)
 valid_data = datasets.CIFAR10("data_cifar10", train=False, download=True)
 IMG2VEC_PATH = "cifar10_vec/"  # 定义存储CIFAR-10图像向量的路径
+Path(IMG2VEC_PATH).mkdir(parents=True, exist_ok=True)
 
 # 处理训练数据
 data_t = list(train_data)
 for i in tqdm(range(len(data_t))):
     img_tensor = img2vec.get_vec(data_t[i][0], tensor=True)  # 转换图像为向量
-    img_tensor = torch.squeeze(img_tensor)  # 去除多余的维度
+    img_tensor = torch.squeeze(img_tensor)  # 移除张量中维度大小为 1 的维度
     # 保存图像向量，文件名用0填充至5位数
     torch.save(img_tensor, IMG2VEC_PATH + str(i).zfill(5) + ".vec")
 
@@ -58,6 +59,7 @@ print("CelebA数据集 处理完毕")
 
 IMG2VEC_PATH = "imagenette2/imagenette_img2vec_resnet/"  # 定义存储ImageNet图像向量的路径
 IMG_PATH = "imagenette2/"  # 定义原始图像数据的路径
+Path(IMG2VEC_PATH).mkdir(parents=True, exist_ok=True)
 
 # 导入glob库，用于路径模式匹配
 import glob
