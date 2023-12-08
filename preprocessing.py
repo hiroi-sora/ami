@@ -10,7 +10,7 @@ from pathlib import Path
 print("开始")
 
 # 初始化img2vec，使用CUDA加速
-img2vec = Img2Vec(cuda=True)
+img2vec = Img2Vec(cuda=True)  # model="resnet-18"
 
 # =============== CelebA数据集处理 ===============
 IMG2VEC_PATH = "data_celebA/celeba_img2vec_resnet/"  # 定义存储图像向量的路径
